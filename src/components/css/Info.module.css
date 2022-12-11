@@ -1,0 +1,61 @@
+.container {
+  text-align: left;
+  margin: 0 auto;
+}
+
+.container label {
+  position: relative;
+  display: block;
+  font-size: 15px;
+}
+
+.container ::placeholder {
+  font-size: 15px;
+  font-weight: 500;
+  color: hsl(231, 11%, 63%);
+}
+
+.container input {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  color: hsl(213, 96%, 18%);
+  margin: 7px 0 22px;
+  border-radius: 7px;
+  border: 1px solid hsl(229, 24%, 87%);
+  height: 45px;
+  padding-left: 15px;
+  width: 450px;
+}
+
+.container input:hover {
+  border-color: hsl(243, 31%, 44%);
+  cursor: pointer;
+}
+.container input:focus {
+  outline: none !important;
+}
+
+.container .invalid[name="name"],
+.container .invalid[name="email"],
+.container .invalid[name="tel"] {
+  border-color: hsl(354, 84%, 57%);
+}
+
+.container form {
+  color: hsl(213, 96%, 18%);
+}
+
+.container button {
+  position: absolute;
+  bottom: 30px;
+  right: 108px;
+}
+
+.required {
+  position: absolute;
+  display: block;
+  right: 3px;
+  top: 0;
+  color: hsl(354, 84%, 57%);
+}

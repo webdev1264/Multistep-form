@@ -1,0 +1,129 @@
+.container {
+  margin: 0 auto;
+  text-align: left;
+}
+
+.wrapper {
+  background-color: hsl(230,75%,98%);
+  border-radius: 8px;
+  min-height: 180px;
+  width: 450px;
+  padding: 25px;
+}
+
+.planWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heading,
+.price {
+  color: hsl(213, 96%, 18%);
+  font-weight: 500;
+}
+
+.price {
+  font-weight: 700;
+}
+
+.btn {
+  background-color: transparent;
+  border: none;
+  color: hsl(231, 11%, 63%);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: underline;
+  margin-top: 7px;
+}
+
+.btn:hover {
+  color: hsl(244, 95%, 77%);
+  
+  cursor: pointer;
+}
+
+.divider {
+  background-color: hsl(229, 24%, 87%);
+  height: 0.5px;
+  width: 400px;
+  margin-top: 22px;
+}
+
+.addonsWrapper {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.addonName {
+  color: hsl(231, 11%, 63%);
+  margin-top: 22px;
+}
+
+.addonPrice {
+  color: hsl(213, 96%, 18%);
+  margin-top: 22px;
+}
+
+.totalWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 25px 0 25px;
+}
+
+.totalName {
+  color: hsl(231, 11%, 63%);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.totalPrice {
+  color: hsl(243, 100%, 62%);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+
+.navigation {
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  bottom: 30px;
+  right: 108px;
+  width: 450px;
+}
+
+.prevBtn,
+.nextBtn {
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  color: hsl(231, 11%, 63%);
+  font-size: 16px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+}
+
+.prevBtn:focus,
+.nextBtn:focus {
+  outline: none !important;
+}
+
+.prevBtn:hover {
+  color: hsl(213, 71%, 32%);
+}
+
+.nextBtn {
+  background-color: hsl(243, 100%, 62%);
+  border-radius: 10px;
+  color: #fff;
+  height: 48px;
+  width: 122px;
+}
+
+.nextBtn:hover {
+  background-color: hsl(244, 95%, 77%);
+}

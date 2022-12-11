@@ -1,0 +1,21 @@
+.container {
+  padding-top: 165px;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.container h1 {
+  color: hsl(213, 96%, 18%);
+  margin-top: 30px;
+}
+
+.container p {
+  color: hsl(231, 11%, 63%);
+  font-size: 16px;
+  line-height: 25px;
+  margin-top: 25px;
+}
+
+.container a {
+  color: hsl(231, 11%, 63%);
+}

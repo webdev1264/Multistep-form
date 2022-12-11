@@ -1,0 +1,43 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(230, 75%, 98%);
+  border-radius: 5px;
+  height: 45px;
+  width: 450px;
+  margin-top: 30px;
+}
+
+.monthly,
+.yearly {
+  color: hsl(231, 11%, 63%);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.switch {
+  cursor: pointer;
+  background-color: hsl(213, 96%, 18%);
+  border-radius: 15px 15px;
+  width: 40px;
+  height: 20px;
+  margin: 0 23px;
+}
+
+.round {
+  background-color: #fff;
+  border-radius: 100%;
+  width: 12px;
+  height: 12px;
+  margin: 4px;
+  transition: 0.3s all;
+}
+
+.active {
+  margin-left: 23px;
+}
+
+.blue {
+  color: hsl(213, 96%, 18%);
+}

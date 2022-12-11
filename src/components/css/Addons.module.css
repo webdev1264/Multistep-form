@@ -1,0 +1,82 @@
+.container {
+  margin: 0 auto;
+  text-align: left;
+}
+
+.wrapper {
+  display: flex;
+  position: relative;
+  align-items: center;
+  border: 1px solid hsl(229, 24%, 87%);
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 17px;
+  padding: 0 25px;
+  width: 450px;
+  height: 80px;
+}
+
+.wrapper:hover {
+  border-color: hsl(243, 100%, 62%);
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 19px;
+  width: 19px;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: hsl(243, 100%, 62%);
+}
+
+.selected {
+  background-color: hsl(231, 100%, 99%);
+  border-color: hsl(243, 100%, 62%);
+}
+
+.checkmark {
+  cursor: pointer;
+  position: relative;
+  border: 1px solid hsl(229, 24%, 87%);
+  border-radius: 3px;
+  height: 19px;
+  width: 19px;
+}
+
+.container .checkmark:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 3px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2.5px 2.5px 0;
+  transform: rotate(45deg);
+}
+
+.descrWrapper {
+  margin-left: 25px;
+}
+
+.header {
+  font-size: 18px;
+  color: hsl(213, 96%, 18%);
+}
+
+.descr {
+  font-size: 16px;
+  color: hsl(231, 11%, 63%);
+  margin-top: 5px;
+}
+
+.price {
+  font-size: 15px;
+  color: hsl(243, 100%, 62%);
+  position: absolute;
+  right: 20px;
+}
