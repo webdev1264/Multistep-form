@@ -7,7 +7,7 @@
   display: flex;
   position: relative;
   align-items: center;
-  border: 1px solid hsl(229, 24%, 87%);
+  border: 1px solid var(--light-gray);
   border-radius: 8px;
   cursor: pointer;
   margin-bottom: 17px;
@@ -17,7 +17,7 @@
 }
 
 .wrapper:hover {
-  border-color: hsl(243, 100%, 62%);
+  border-color: var(--violet);
 }
 
 .container input {
@@ -29,18 +29,18 @@
 }
 
 .container input:checked ~ .checkmark {
-  background-color: hsl(243, 100%, 62%);
+  background-color: var(--purpish-blue);
 }
 
 .selected {
-  background-color: hsl(231, 100%, 99%);
-  border-color: hsl(243, 100%, 62%);
+  background-color: var(--alabaster);
+  border-color: var(--violet);
 }
 
 .checkmark {
   cursor: pointer;
   position: relative;
-  border: 1px solid hsl(229, 24%, 87%);
+  border: 1px solid var(--light-gray);
   border-radius: 3px;
   height: 19px;
   width: 19px;
@@ -65,18 +65,18 @@
 
 .header {
   font-size: 18px;
-  color: hsl(213, 96%, 18%);
+  color: var(--marine-blue);
 }
 
 .descr {
   font-size: 16px;
-  color: hsl(231, 11%, 63%);
+  color: var(--cool-gray);
   margin-top: 5px;
 }
 
 .price {
   font-size: 15px;
-  color: hsl(243, 100%, 62%);
+  color: var(--light-violet);
   position: absolute;
   right: 20px;
 }

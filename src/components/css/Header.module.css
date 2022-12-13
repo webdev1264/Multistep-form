@@ -1,5 +1,5 @@
 .heading {
-  color: hsl(213, 96%, 18%);
+  color: var(--marine-blue);
   margin-top: 45px;
 }
 

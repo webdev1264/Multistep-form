@@ -1,6 +1,6 @@
-import styles from "./css/Billing.module.css";
+import styles from "../css/Billing.module.css";
 
-const Billing = ({ billingChange, billing, setBilling }) => {
+const Billing = ({ billingChange, billing }) => {
   const onClickHandler = () => {
     billingChange();
   };

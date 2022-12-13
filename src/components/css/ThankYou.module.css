@@ -5,15 +5,12 @@
 }
 
 .container h1 {
-  color: hsl(213, 96%, 18%);
-  margin-top: 30px;
+  margin-bottom: 25px;
 }
 
 .container p {
-  color: hsl(231, 11%, 63%);
-  font-size: 16px;
+  display: inline;
   line-height: 25px;
-  margin-top: 25px;
 }
 
 .container a {

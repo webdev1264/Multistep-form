@@ -1,5 +1,5 @@
 .btn {
-  background-color: hsl(213, 96%, 18%);
+  background-color: var(--marine-blue);
   border: none;
   border-radius: 10px;
   font-size: 16px;

@@ -4,7 +4,7 @@
 }
 
 .wrapper {
-  background-color: hsl(230,75%,98%);
+  background-color: var(--alabaster);
   border-radius: 8px;
   min-height: 180px;
   width: 450px;
@@ -19,7 +19,7 @@
 
 .heading,
 .price {
-  color: hsl(213, 96%, 18%);
+  color: var(--marine-blue);
   font-weight: 500;
 }
 
@@ -30,7 +30,8 @@
 .btn {
   background-color: transparent;
   border: none;
-  color: hsl(231, 11%, 63%);
+  color: var(--cool-gray);
+  cursor: pointer;
   font-size: 14px;
   font-weight: 500;
   text-decoration: underline;
@@ -38,13 +39,11 @@
 }
 
 .btn:hover {
-  color: hsl(244, 95%, 77%);
-  
-  cursor: pointer;
+  color: var(--light-violet);
 }
 
 .divider {
-  background-color: hsl(229, 24%, 87%);
+  background-color: var(--light-gray);
   height: 0.5px;
   width: 400px;
   margin-top: 22px;
@@ -58,12 +57,12 @@
 }
 
 .addonName {
-  color: hsl(231, 11%, 63%);
+  color: var(--cool-gray);
   margin-top: 22px;
 }
 
 .addonPrice {
-  color: hsl(213, 96%, 18%);
+  color: var(--marine-blue);
   margin-top: 22px;
 }
 
@@ -75,17 +74,16 @@
 }
 
 .totalName {
-  color: hsl(231, 11%, 63%);
+  color: var(--cool-gray);
   font-size: 14px;
   font-weight: 500;
 }
 
 .totalPrice {
-  color: hsl(243, 100%, 62%);
+  color: var(--purpish-blue);
   font-size: 18px;
   font-weight: 700;
 }
-
 
 .navigation {
   display: flex;
@@ -101,7 +99,7 @@
   background-color: #fff;
   border: none;
   cursor: pointer;
-  color: hsl(231, 11%, 63%);
+  color: var(--cool-gray);
   font-size: 16px;
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
@@ -113,11 +111,11 @@
 }
 
 .prevBtn:hover {
-  color: hsl(213, 71%, 32%);
+  color: var(--marine-blue);
 }
 
 .nextBtn {
-  background-color: hsl(243, 100%, 62%);
+  background-color: var(--purpish-blue);
   border-radius: 10px;
   color: #fff;
   height: 48px;
@@ -125,5 +123,5 @@
 }
 
 .nextBtn:hover {
-  background-color: hsl(244, 95%, 77%);
+  background-color: var(--light-violet);
 }

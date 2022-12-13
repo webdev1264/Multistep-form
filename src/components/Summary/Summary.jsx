@@ -1,5 +1,5 @@
-import Header from "./Header";
-import styles from "./css/Summary.module.css";
+import Header from "../Header";
+import styles from "../css/Summary.module.css";
 
 const Summary = ({
   prevStep,
@@ -67,18 +67,12 @@ const Summary = ({
           billing ? "month" : "year"
         })`}</p>
         <p className={styles.totalPrice}>{`$${totalSum()}`}</p>
-        {/* <Navigation
-          prevStep={prevStep}
-          btnText="Submit"
-          btnColor="hsl(243, 100%, 62%)"
-        /> */}
-
         <div className={styles.navigation}>
           <button className={styles.prevBtn} onClick={prevStep}>
             Go Back
           </button>
           <button className={styles.nextBtn} onClick={() => setStep()}>
-            Submit
+            Confirm
           </button>
         </div>
       </div>

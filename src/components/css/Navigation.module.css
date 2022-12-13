@@ -11,7 +11,7 @@
   background-color: #fff;
   border: none;
   cursor: pointer;
-  color: hsl(231, 11%, 63%);
+  color: var(--cool-gray);
   font-size: 16px;
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
@@ -22,5 +22,5 @@
 }
 
 .backBtn:hover {
-  color: hsl(213, 71%, 32%);
+  color: var(--marine-blue);
 }

@@ -12,24 +12,24 @@
 .container ::placeholder {
   font-size: 15px;
   font-weight: 500;
-  color: hsl(231, 11%, 63%);
+  color: var(--cool-gray);
 }
 
 .container input {
   display: block;
   font-size: 15px;
   font-weight: 700;
-  color: hsl(213, 96%, 18%);
+  color: var(--marine-blue);
   margin: 7px 0 22px;
   border-radius: 7px;
-  border: 1px solid hsl(229, 24%, 87%);
+  border: 1px solid var(--light-gray);
   height: 45px;
   padding-left: 15px;
   width: 450px;
 }
 
 .container input:hover {
-  border-color: hsl(243, 31%, 44%);
+  border-color: var(--violet);
   cursor: pointer;
 }
 .container input:focus {
@@ -39,11 +39,11 @@
 .container .invalid[name="name"],
 .container .invalid[name="email"],
 .container .invalid[name="tel"] {
-  border-color: hsl(354, 84%, 57%);
+  border-color: var(--strawberry-red);
 }
 
 .container form {
-  color: hsl(213, 96%, 18%);
+  color: var(--marine-blue);
 }
 
 .container button {
@@ -57,5 +57,5 @@
   display: block;
   right: 3px;
   top: 0;
-  color: hsl(354, 84%, 57%);
+  color: var(--strawberry-red);
 }

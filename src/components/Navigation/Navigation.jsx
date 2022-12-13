@@ -1,5 +1,5 @@
 import Button from "./Button";
-import styles from "./css/Navigation.module.css";
+import styles from "../css/Navigation.module.css";
 
 const Navigation = ({ prevStep, nextStep }) => {
   return (

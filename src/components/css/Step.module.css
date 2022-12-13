@@ -8,12 +8,12 @@
   font-size: 15px;
   font-weight: 700;
   line-height: 29px;
-  color: hsl(229, 24%, 87%);
+  color: var(--light-gray);
   text-decoration: none;
   width: 32px;
   height: 32px;
   border-radius: 100%;
-  border: 2px solid hsl(231, 11%, 63%);
+  border: 2px solid var(--cool-gray);
   margin: 0 15px 0 0;
   text-align: center;
 }
@@ -21,19 +21,19 @@
 .heading {
   font-size: 12px;
   font-weight: 400;
-  color: hsl(231, 11%, 63%);
+  color: var(--cool-gray);
   text-align: left;
 }
 
 .text {
   font-size: 15px;
   font-weight: 700;
-  color: hsl(229, 24%, 87%);
+  color: var(--light-gray);
   text-transform: uppercase;
 }
 
 .active {
-  background-color: hsl(206, 94%, 87%);
+  background-color: var(--light-gray);
   color: #000;
-  border-color: hsl(206, 94%, 87%);
+  border-color: var(--light-gray);
 }

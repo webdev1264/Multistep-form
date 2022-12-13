@@ -1,7 +1,7 @@
 // import { useState } from "react";
-import Header from "./Header";
-import Navigation from "./Navigation";
-import styles from "./css/Addons.module.css";
+import Header from "../Header";
+import Navigation from "../Navigation/Navigation";
+import styles from "../css/Addons.module.css";
 
 const Addons = ({ addons, setAddons, nextStep, prevStep, billing }) => {
   // const [isChecked, setIsChecked] = useState(

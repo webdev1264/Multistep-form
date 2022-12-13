@@ -1,4 +1,4 @@
-import styles from "./css/Button.module.css";
+import styles from "../css/Button.module.css";
 
 const Button = ({ nextStep }) => {
   return (

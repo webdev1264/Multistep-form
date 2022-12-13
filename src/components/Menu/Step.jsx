@@ -1,4 +1,4 @@
-import styles from "./css/Step.module.css";
+import styles from "../css/Step.module.css";
 
 const Step = ({ id, text, step=4 }) => {
   return (

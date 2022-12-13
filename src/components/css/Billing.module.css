@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: hsl(230, 75%, 98%);
+  background-color: var(--alabaster);
   border-radius: 5px;
   height: 45px;
   width: 450px;
@@ -11,14 +11,14 @@
 
 .monthly,
 .yearly {
-  color: hsl(231, 11%, 63%);
+  color: var(--cool-gray);
   font-size: 14px;
   font-weight: 500;
 }
 
 .switch {
   cursor: pointer;
-  background-color: hsl(213, 96%, 18%);
+  background-color: var(--marine-blue);
   border-radius: 15px 15px;
   width: 40px;
   height: 20px;
@@ -39,5 +39,5 @@
 }
 
 .blue {
-  color: hsl(213, 96%, 18%);
+  color: var(--marine-blue);
 }

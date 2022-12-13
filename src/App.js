@@ -1,9 +1,9 @@
 import { useState } from "react";
-import Menu from "./components/Menu";
-import Info from "./components/Info";
-import Plan from "./components/Plan";
-import Addons from "./components/Addons";
-import Summary from "./components/Summary";
+import Menu from "./components/Menu/Menu";
+import Info from "./components/Info/Info";
+import Plan from "./components/Plan/Plan";
+import Addons from "./components/Addons/Addons";
+import Summary from "./components/Summary/Summary";
 import Footer from "./components/Footer";
 import "./App.css";
 import ThankYou from "./components/ThankYou";
