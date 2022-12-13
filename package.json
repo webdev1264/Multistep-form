@@ -1,7 +1,7 @@
 {
-  "name": "99-template",
+  "name": "multistep-form",
   "version": "0.1.0",
-  "homepage" : "https://webdev1264.github.io/Multistep-form/",
+  "homepage" : "https://webdev1264.github.io/01-iCalc/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -10,7 +10,6 @@
     "gh-pages": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.4.4",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
