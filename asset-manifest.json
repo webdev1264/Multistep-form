@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/01-iCalc/static/css/main.6beb4f57.css",
-    "main.js": "/01-iCalc/static/js/main.78c7f418.js",
-    "static/media/bg-sidebar-desktop.svg": "/01-iCalc/static/media/bg-sidebar-desktop.6918153f38678372ceb1.svg",
-    "static/media/icon-advanced.svg": "/01-iCalc/static/media/icon-advanced.705bd10c4c1f688871d729633f0ca4ae.svg",
-    "static/media/icon-thank-you.svg": "/01-iCalc/static/media/icon-thank-you.ee753f231cc5a5789b8eb922a96472c0.svg",
-    "static/media/icon-pro.svg": "/01-iCalc/static/media/icon-pro.2e7e377da9c658d608624304a0f8dae6.svg",
-    "index.html": "/01-iCalc/index.html",
-    "static/media/icon-arcade.svg": "/01-iCalc/static/media/icon-arcade.a08c098289a31bb2f66d675be71565b3.svg",
-    "main.6beb4f57.css.map": "/01-iCalc/static/css/main.6beb4f57.css.map",
-    "main.78c7f418.js.map": "/01-iCalc/static/js/main.78c7f418.js.map"
+    "main.css": "/Multistep-form/static/css/main.1d90ad9b.css",
+    "main.js": "/Multistep-form/static/js/main.f7122ce5.js",
+    "static/media/bg-sidebar-desktop.svg": "/Multistep-form/static/media/bg-sidebar-desktop.6918153f38678372ceb1.svg",
+    "static/media/icon-advanced.svg": "/Multistep-form/static/media/icon-advanced.705bd10c4c1f688871d729633f0ca4ae.svg",
+    "static/media/icon-thank-you.svg": "/Multistep-form/static/media/icon-thank-you.ee753f231cc5a5789b8eb922a96472c0.svg",
+    "static/media/icon-pro.svg": "/Multistep-form/static/media/icon-pro.2e7e377da9c658d608624304a0f8dae6.svg",
+    "index.html": "/Multistep-form/index.html",
+    "static/media/icon-arcade.svg": "/Multistep-form/static/media/icon-arcade.a08c098289a31bb2f66d675be71565b3.svg",
+    "main.1d90ad9b.css.map": "/Multistep-form/static/css/main.1d90ad9b.css.map",
+    "main.f7122ce5.js.map": "/Multistep-form/static/js/main.f7122ce5.js.map"
   },
   "entrypoints": [
-    "static/css/main.6beb4f57.css",
-    "static/js/main.78c7f418.js"
+    "static/css/main.1d90ad9b.css",
+    "static/js/main.f7122ce5.js"
   ]
 }
