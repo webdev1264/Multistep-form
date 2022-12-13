@@ -1,5 +1,5 @@
 import Header from "./Header";
-import styles from "./css/ThankYou.module.css";
+import styles from "./thankYou.module.css";
 import thankYou from "../data/images/icon-thank-you.svg";
 
 const ThankYou = () => {

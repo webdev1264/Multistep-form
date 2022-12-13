@@ -1,5 +1,5 @@
 
-import styles from "./css/Header.module.css";
+import styles from "./header.module.css";
 
 const Header = ({ heading, descr }) => {
 

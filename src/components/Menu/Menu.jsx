@@ -1,5 +1,5 @@
 import Step from "./Step";
-import styles from "../css/Menu.module.css";
+import styles from "./menu.module.css";
 
 const Menu = ({ step }) => {
   return (

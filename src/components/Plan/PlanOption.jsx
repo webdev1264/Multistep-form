@@ -1,4 +1,4 @@
-import styles from "../css/PlanOption.module.css";
+import styles from "./planOption.module.css";
 import arcade from "../../data/images/icon-arcade.svg";
 import advanced from "../../data/images/icon-advanced.svg";
 import pro from "../../data/images/icon-pro.svg";

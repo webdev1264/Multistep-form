@@ -3,7 +3,7 @@ const Footer = () => {
     <div className="attribution">
       Challenge by{" "}
       <a
-        href="https://www.frontendmentor.io?ref=challenge"
+        href="https://www.frontendmentor.io"
         target="_blank"
         rel="noreferrer"
       >

@@ -1,12 +1,8 @@
-// import { useState } from "react";
 import Header from "../Header";
 import Navigation from "../Navigation/Navigation";
-import styles from "../css/Addons.module.css";
+import styles from "./addons.module.css";
 
 const Addons = ({ addons, setAddons, nextStep, prevStep, billing }) => {
-  // const [isChecked, setIsChecked] = useState(
-  //   new Array(addons.length).fill(false)
-  // );
 
   const handleChange = (index) => {
     setAddons(

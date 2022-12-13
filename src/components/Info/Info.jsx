@@ -1,6 +1,6 @@
 import Header from "../Header";
 import Button from "../Navigation/Button";
-import styles from "../css/Info.module.css";
+import styles from "./info.module.css";
 
 const Info = ({ info, setInfo, isValidated, checkValidation }) => {
   const onChangeHandler = (event) => {

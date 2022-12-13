@@ -1,5 +1,5 @@
 import Header from "../Header";
-import styles from "../css/Summary.module.css";
+import styles from "./summary.module.css";
 
 const Summary = ({
   prevStep,

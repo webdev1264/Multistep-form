@@ -13,7 +13,7 @@
   width: 32px;
   height: 32px;
   border-radius: 100%;
-  border: 2px solid var(--cool-gray);
+  border: 1px solid var(--light-gray);
   margin: 0 15px 0 0;
   text-align: center;
 }
@@ -33,7 +33,23 @@
 }
 
 .active {
-  background-color: var(--light-gray);
-  color: #000;
+  background-color: var(--ligth-blue);
+  color: var(--marine-blue);
   border-color: var(--light-gray);
+}
+
+@media screen and (max-width: 768px) {
+  .steps {
+    padding: 0;
+  }
+  .round {
+    margin: 0 8px;
+  }
+  .text {
+    display: none;
+  }
+  .heading{
+    display: none;
+  }
+
 }

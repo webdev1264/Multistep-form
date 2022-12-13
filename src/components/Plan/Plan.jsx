@@ -2,7 +2,7 @@ import Header from "../Header";
 import Navigation from "../Navigation/Navigation";
 import PlanOption from "./PlanOption";
 import Billing from "./Billing";
-import styles from "../css/Plan.module.css";
+import styles from "./plan.module.css";
 
 const Plan = ({
   nextStep,

@@ -2,13 +2,12 @@
   display: flex;
   position: absolute;
   justify-content: space-between;
-  bottom: 30px;
-  right: 108px;
+  bottom: 15px;
   width: 450px;
 }
 
 .backBtn {
-  background-color: #fff;
+  background-color: transparent;
   border: none;
   cursor: pointer;
   color: var(--cool-gray);

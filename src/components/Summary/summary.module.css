@@ -1,4 +1,5 @@
 .container {
+  position: relative;
   margin: 0 auto;
   text-align: left;
 }
@@ -89,8 +90,8 @@
   display: flex;
   position: absolute;
   justify-content: space-between;
-  bottom: 30px;
-  right: 108px;
+  bottom: 15px;
+  right: 0;
   width: 450px;
 }
 

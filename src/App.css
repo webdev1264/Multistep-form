@@ -1,16 +1,23 @@
 .App {
+  position: relative;
   text-align: center;
   background: var(--magnolia);
   padding-top: 100px;
 }
 
 .container {
-  position: relative;
   display: flex;
   margin: 0 auto 50px;
   padding: 15px;
   background-color: #fff;
   border-radius: 15px;
   height: 600px;
-  width: 940px;
+  max-width: 940px;
+}
+
+@media screen and (max-width: 768px) {
+  .App {
+    padding: 100px 15px;
+    z-index: 0;
+  }
 }
