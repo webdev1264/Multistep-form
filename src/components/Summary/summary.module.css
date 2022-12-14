@@ -47,7 +47,7 @@
 .divider {
   background-color: var(--light-gray);
   height: 0.5px;
-  width: 400px;
+  width: 100%;
   margin-top: 22px;
 }
 
@@ -126,4 +126,19 @@
 
 .nextBtn:hover {
   background-color: var(--light-violet);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    position: static;
+    width: 100%;
+  }
+
+  .navigation {
+    bottom: 15px;
+    left: 0;
+    padding: 0 40px;
+    width: 100%;
+    text-align: right;
+  }
 }

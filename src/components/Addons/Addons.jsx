@@ -39,7 +39,7 @@ const Addons = ({ addons, setAddons, nextStep, prevStep, billing }) => {
               <p className={styles.descr}>{addon.descr}</p>
             </div>
             <div className={styles.price}>{`+$${addon.price}/${
-              billing ? "month" : "year"
+              billing ? "mo" : "yr"
             }`}</div>
           </label>
         ))}

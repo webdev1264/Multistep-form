@@ -89,4 +89,12 @@
     width: 100%;
   }
 
+  .wrapper {
+    padding: 0 15px;
+  }
+
+  .descrWrapper {
+    margin-left: 15px;
+  }
+
 }
