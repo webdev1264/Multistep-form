@@ -16,3 +16,9 @@
 .container a {
   color: var(--cool-gray);
 }
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+}
