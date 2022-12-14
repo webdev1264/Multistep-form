@@ -70,7 +70,9 @@ const Info = ({ info, setInfo, isValidated, checkValidation }) => {
             value={info.tel}
           />
         </label>
-        <Button />
+        <div className={styles.btnWrapper}>
+          <Button />
+        </div>
       </form>
     </div>
   );

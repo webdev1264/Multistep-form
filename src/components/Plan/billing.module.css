@@ -5,7 +5,7 @@
   background-color: var(--alabaster);
   border-radius: 5px;
   height: 45px;
-  width: 450px;
+  width: 100%;
   margin-top: 30px;
 }
 
@@ -40,4 +40,10 @@
 
 .blue {
   color: var(--marine-blue);
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    margin-top: 19px;
+  }
 }

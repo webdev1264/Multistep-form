@@ -1,6 +1,6 @@
 .steps {
   display: flex;
-  padding: 30px 30px 0;
+  margin-bottom: 30px;
   text-decoration: none;
 }
 
@@ -48,8 +48,7 @@
   .text {
     display: none;
   }
-  .heading{
+  .heading {
     display: none;
   }
-
 }

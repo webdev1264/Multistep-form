@@ -2,9 +2,20 @@
   position: relative;
   text-align: left;
   margin: 0 auto;
+  width: 450px;
 }
 
-.wrapper{
+.wrapper {
   display: flex;
   justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    position: static;
+    width: 100%;
+  }
+  .wrapper {
+    flex-direction: column;
+  }
 }

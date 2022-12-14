@@ -2,13 +2,14 @@
   position: relative;
   margin: 0 auto;
   text-align: left;
+  width: 450px;
 }
 
 .wrapper {
   background-color: var(--alabaster);
   border-radius: 8px;
   min-height: 180px;
-  width: 450px;
+  width: 100%;
   padding: 25px;
 }
 
@@ -92,7 +93,7 @@
   justify-content: space-between;
   bottom: 15px;
   right: 0;
-  width: 450px;
+  width: 100%;
 }
 
 .prevBtn,

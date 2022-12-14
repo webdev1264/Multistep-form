@@ -7,3 +7,13 @@
   color: hsl(231, 11%, 63%);
   margin: 15px 0 40px;
 }
+
+@media screen and (max-width:768px) {
+  .heading {
+    margin-top: 35px;
+  }
+
+  .descr {
+    margin-bottom: 25px;
+  }
+}

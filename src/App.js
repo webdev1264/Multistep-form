@@ -4,7 +4,6 @@ import Info from "./components/Info/Info";
 import Plan from "./components/Plan/Plan";
 import Addons from "./components/Addons/Addons";
 import Summary from "./components/Summary/Summary";
-import Footer from "./components/Footer";
 import "./App.css";
 import ThankYou from "./components/ThankYou";
 
@@ -169,7 +168,7 @@ function App() {
           <ThankYou />
         )}
       </div>
-      <Footer />
+      <div className="mobileNavigation"></div>
     </div>
   );
 }

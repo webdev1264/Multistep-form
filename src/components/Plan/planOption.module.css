@@ -41,3 +41,20 @@
   background-color: var(--alabaster);
   border-color: var(--violet);
 }
+
+@media screen and (max-width: 768px) {
+  .option {
+    display: flex;
+    width: 100%;
+    min-height: 75px;
+    margin: 12px 0;
+  }
+  .option:nth-child(2) {
+    margin: 6px 0;
+  }
+
+  .option img,
+  .option h2 {
+    margin-top: 15px;
+  }
+}

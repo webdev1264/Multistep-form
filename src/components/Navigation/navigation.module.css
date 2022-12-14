@@ -3,7 +3,7 @@
   position: absolute;
   justify-content: space-between;
   bottom: 15px;
-  width: 450px;
+  width: 100%;
 }
 
 .backBtn {
@@ -22,4 +22,14 @@
 
 .backBtn:hover {
   color: var(--marine-blue);
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    bottom: 15px;
+    left: 0;
+    padding: 0 40px;
+    width: 100%;
+    text-align: right;
+  }
 }

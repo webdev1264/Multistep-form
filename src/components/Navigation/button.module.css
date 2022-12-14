@@ -16,3 +16,11 @@
 .btn:hover {
   background-color: hsl(213, 71%, 32%);
 }
+
+@media screen and (max-width: 768px) {
+  .btn {
+    border-radius: 5px;
+    height: 40px;
+    width: 100px;
+  }
+}
