@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Multistep-form/static/css/main.67ccb2fc.css",
+    "main.css": "/Multistep-form/static/css/main.a862123a.css",
     "main.js": "/Multistep-form/static/js/main.9a736595.js",
     "static/media/bg-sidebar-desktop.svg": "/Multistep-form/static/media/bg-sidebar-desktop.6918153f38678372ceb1.svg",
     "static/media/bg-sidebar-mobile.svg": "/Multistep-form/static/media/bg-sidebar-mobile.ad41661b40ca0b967f3a.svg",
@@ -9,11 +9,11 @@
     "index.html": "/Multistep-form/index.html",
     "static/media/icon-pro.svg": "/Multistep-form/static/media/icon-pro.2e7e377da9c658d608624304a0f8dae6.svg",
     "static/media/icon-arcade.svg": "/Multistep-form/static/media/icon-arcade.a08c098289a31bb2f66d675be71565b3.svg",
-    "main.67ccb2fc.css.map": "/Multistep-form/static/css/main.67ccb2fc.css.map",
+    "main.a862123a.css.map": "/Multistep-form/static/css/main.a862123a.css.map",
     "main.9a736595.js.map": "/Multistep-form/static/js/main.9a736595.js.map"
   },
   "entrypoints": [
-    "static/css/main.67ccb2fc.css",
+    "static/css/main.a862123a.css",
     "static/js/main.9a736595.js"
   ]
 }
