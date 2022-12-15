@@ -12,7 +12,7 @@
   border: 1px solid var(--light-gray);
   border-radius: 8px;
   cursor: pointer;
-  margin-bottom: 17px;
+  margin-bottom: 13px;
   padding: 0 25px;
   width: 100%;
   height: 80px;
@@ -96,5 +96,24 @@
   .descrWrapper {
     margin-left: 15px;
   }
+}
 
+@media screen and (max-width: 425px) {
+  .wrapper {
+    height: 61px;
+  }
+
+  .header {
+    font-size: 13.5px;
+  }
+
+  .descr {
+    font-size: 12px;
+  }
+
+  .price {
+    font-size: 13px;
+    font-weight: 700;
+    right: 15px;
+  }
 }

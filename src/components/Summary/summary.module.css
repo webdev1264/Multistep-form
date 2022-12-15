@@ -8,7 +8,7 @@
 .wrapper {
   background-color: var(--alabaster);
   border-radius: 8px;
-  min-height: 180px;
+  /* min-height: 180px; */
   width: 100%;
   padding: 25px;
 }
@@ -72,7 +72,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 30px 25px 0 25px;
+  margin: 30px 25px 0;
 }
 
 .totalName {
@@ -140,5 +140,46 @@
     padding: 0 40px;
     width: 100%;
     text-align: right;
+  }
+
+  .nextBtn {
+    border-radius: 5px;
+    height: 40px;
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .wrapper {
+    padding: 17px;
+  }
+
+  .heading {
+    font-size: 14px;
+  }
+
+  .price {
+    font-size: 14px;
+  }
+
+  .divider {
+    margin-top: 12px;
+  }
+
+  .addonName,
+  .addonPrice {
+    margin-top: 15px;
+  }
+
+  .totalWrapper{
+    margin: 25px 15px 0;
+  }
+
+  .totalPrice{
+    font-size: 17px;
+  }
+
+  .navigation {
+    padding: 0 15px;
   }
 }

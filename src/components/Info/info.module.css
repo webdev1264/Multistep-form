@@ -79,3 +79,18 @@
     position: static;
   }
 }
+
+@media screen and (max-width: 425px) {
+  .container label {
+    font-size: 12px;
+  }
+
+  .container input {
+    margin: 3px 0 17px;
+    height: 39px;
+  }
+
+  .btnWrapper {
+    padding: 0 15px;
+  }
+}

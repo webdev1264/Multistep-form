@@ -58,3 +58,10 @@
     margin-top: 15px;
   }
 }
+
+@media screen and (max-width: 425px) {
+  .option,
+  .option:nth-child(2) {
+    margin: 0 0 14px;
+  }
+}

@@ -16,7 +16,7 @@ const Addons = ({ addons, setAddons, nextStep, prevStep, billing }) => {
     <div className={styles.container}>
       <Header
         heading="Pick add-ons"
-        descr="Add-ons help enhance your gaming experiece."
+        descr="Add-ons help enhance your gaming experience."
       />
       <form>
         {addons.map((addon, index) => (

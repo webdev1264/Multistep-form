@@ -25,7 +25,7 @@ const Summary = ({
       <div className={styles.wrapper}>
         <div className={styles.planWrapper}>
           <div>
-            <p className={styles.heading}>{`${plans[selection].name}(${
+            <p className={styles.heading}>{`${plans[selection].name} (${
               billing ? "Monthly" : "Yearly"
             })`}</p>
             <button className={styles.btn} onClick={() => setStep(2)}>

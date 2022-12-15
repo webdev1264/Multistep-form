@@ -10,7 +10,7 @@
 
 .container p {
   display: inline;
-  line-height: 25px;
+  line-height: 26px;
 }
 
 .container a {
@@ -20,5 +20,23 @@
 @media screen and (max-width: 768px) {
   .container {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .container {
+    padding-top: 80px;
+  }
+  .container img {
+    width: 55px;
+  }
+
+  .container h1 {
+    margin-top: 17px;
+    margin-bottom: 10px;
+  }
+
+  .container p {
+    
   }
 }

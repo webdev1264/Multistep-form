@@ -33,3 +33,8 @@
     text-align: right;
   }
 }
+@media screen and (max-width: 425px) {
+  .wrapper {
+    padding: 0 15px;
+  }
+}
