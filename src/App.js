@@ -124,7 +124,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <main className="App">
       <div className="container">
         <Menu step={step} />
         {step === 1 ? (
@@ -169,7 +169,7 @@ function App() {
         )}
       </div>
       <div className="mobileNavigation"></div>
-    </div>
+    </main>
   );
 }
 
