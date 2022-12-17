@@ -4,8 +4,8 @@ import Info from "./components/Info/Info";
 import Plan from "./components/Plan/Plan";
 import Addons from "./components/Addons/Addons";
 import Summary from "./components/Summary/Summary";
-import "./App.css";
 import ThankYou from "./components/ThankYou";
+import "./App.css";
 
 function App() {
   const [isValidated, setIsValidated] = useState({
