@@ -7,11 +7,10 @@ import styles from "./plan.module.css";
 const Plan = ({
   nextStep,
   prevStep,
-  addPlan,
   billing,
   setBilling,
   selection,
-  setSelection,
+  changePlan,
   plans,
   billingChange,
 }) => {
@@ -22,13 +21,12 @@ const Plan = ({
         descr="You have the option of monthly or yearly billing."
       />
       <div className={styles.wrapper}>
-        {plans.map((option, index) => (
+        {plans.map((plan) => (
           <PlanOption
-            key={index}
-            id={index}
-            {...option}
+            key={plan.id}
+            {...plan}
             selection={selection}
-            setSelection={setSelection}
+            changePlan={changePlan}
             billing={billing}
           />
         ))}

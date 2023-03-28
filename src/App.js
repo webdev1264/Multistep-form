@@ -1,78 +1,61 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import Menu from "./components/Menu/Menu";
 import Info from "./components/Info/Info";
 import Plan from "./components/Plan/Plan";
 import Addons from "./components/Addons/Addons";
 import Summary from "./components/Summary/Summary";
 import ThankYou from "./components/ThankYou";
+import { initialPlans, initialAddons } from "./data/bundle";
 import "./App.css";
 
+const initialSelection = {
+  planId: 1,
+  addonIds: [1],
+};
+
 function App() {
-  const [isValidated, setIsValidated] = useState({
-    name: true,
-    email: true,
-    tel: true,
-  });
-
-  const [step, setStep] = useState(1);
-
-  const [billing, setBilling] = useState(true);
-
-  const [selection, setSelection] = useState(0);
-
+  // data from form inputs
   const [info, setInfo] = useState({
     name: "",
     email: "",
     tel: "",
   });
+  const [step, setStep] = useState(1);
+  //yearly or monthly billing
+  const [billing, setBilling] = useState(true);
+  // selection of plan and plans
+  const [selection, setSelection] = useState(initialSelection);
 
-  const [plans, setPlans] = useState([
-    {
-      name: "Arcade",
-      price: 9,
-    },
-    {
-      name: "Advanced",
-      price: 12,
-    },
-    {
-      name: "Pro",
-      price: 15,
-    },
-  ]);
+  const [plans, addons] = useMemo(() => {
+    if (!billing) {
+      return [calcPrice(initialPlans, 10), calcPrice(initialAddons, 10)];
+    }
+    return [initialPlans, initialAddons];
+  }, [billing]);
 
-  const [addons, setAddons] = useState([
-    {
-      name: "Online service",
-      descr: "Access to multiplayer games",
-      price: 1,
-      selected: true,
-    },
-    {
-      name: "Larger storage",
-      descr: "Extra 1TB of cloud save",
-      price: 2,
-      selected: true,
-    },
-    {
-      name: "Customizable Profile",
-      descr: "Custom theme on your profile",
-      price: 2,
-      selected: false,
-    },
-  ]);
+  function calcPrice(addons, mult) {
+    return addons.map((addon) => ({
+      ...addon,
+      price: addon.price * mult,
+    }));
+  }
 
-  const validation = ({ name, email, tel }) => {
-    if (!name) {
-      name = false;
-    }
-    if (!email.includes("@")) {
-      email = false;
-    }
-    if (!tel) {
-      tel = false;
-    }
-    return { name, email, tel };
+  const handleChangePlan = (planId) => {
+    setSelection((prev) => ({ ...prev, planId }));
+  };
+
+  const handleAddAddon = (addon) => {
+    const addonId = [...selection.addonIds];
+    addonId.push(addon);
+    setSelection((prev) => ({ ...prev, addonIds: addonId }));
+  };
+
+  const handleRemoveAddon = (addon) => {
+    const addonId = selection.addonIds.filter((addonId) => addonId !== addon);
+    setSelection((prev) => ({
+      ...prev,
+      addonIds: addonId,
+    }));
   };
 
   const nextStep = () => {
@@ -83,44 +66,8 @@ function App() {
     setStep(step - 1);
   };
 
-  const checkValidationHandler = (event) => {
-    event.preventDefault();
-    const validationResult = validation(info);
-    setIsValidated(validationResult);
-    if (!Object.values(validationResult).includes(false)) {
-      nextStep();
-    }
-  };
-
   const billingChangeHandler = () => {
     setBilling(!billing);
-    if (billing) {
-      setPlans(
-        plans.map((plan) => ({
-          ...plan,
-          price: plan.price * 10,
-        }))
-      );
-      setAddons(
-        addons.map((addon) => ({
-          ...addon,
-          price: addon.price * 10,
-        }))
-      );
-      return;
-    }
-    setPlans(
-      plans.map((plan) => ({
-        ...plan,
-        price: plan.price / 10,
-      }))
-    );
-    setAddons(
-      addons.map((addon) => ({
-        ...addon,
-        price: addon.price / 10,
-      }))
-    );
   };
 
   return (
@@ -128,12 +75,7 @@ function App() {
       <div className="container">
         <Menu step={step} />
         {step === 1 ? (
-          <Info
-            info={info}
-            setInfo={setInfo}
-            isValidated={isValidated}
-            checkValidation={checkValidationHandler}
-          />
+          <Info info={info} setInfo={setInfo} nextStep={nextStep} />
         ) : step === 2 ? (
           <Plan
             nextStep={nextStep}
@@ -141,28 +83,28 @@ function App() {
             billing={billing}
             setBilling={setBilling}
             selection={selection}
-            setSelection={setSelection}
+            changePlan={handleChangePlan}
             plans={plans}
             billingChange={billingChangeHandler}
           />
         ) : step === 3 ? (
           <Addons
             addons={addons}
-            setAddons={setAddons}
             nextStep={nextStep}
             prevStep={prevStep}
             billing={billing}
+            addAddon={handleAddAddon}
+            removeAddon={handleRemoveAddon}
+            selection={selection}
           />
         ) : step === 4 ? (
           <Summary
-            plans={plans}
             billing={billing}
             selection={selection}
-            addons={addons}
             prevStep={prevStep}
-            nextStep={nextStep}
-            billingChange={billingChangeHandler}
             setStep={setStep}
+            plans={plans}
+            addons={addons}
           />
         ) : (
           <ThankYou />

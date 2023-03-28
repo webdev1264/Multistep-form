@@ -1,21 +1,11 @@
 import Header from "../Header";
 import styles from "./summary.module.css";
 
-const Summary = ({
-  prevStep,
-  nextStep,
-  plans,
-  billing,
-  selection,
-  addons,
-  setStep,
-}) => {
-  const totalSum = () =>
-    plans[selection].price +
-    addons.reduce(
-      (acc, addon, _) => (addon.selected ? (acc += addon.price) : acc),
-      0
-    );
+const Summary = ({ prevStep, billing, selection, setStep, plans, addons }) => {
+  const { planId, addonIds } = selection;
+  const totalSum =
+    plans[planId - 1].price +
+    addonIds.reduce((acc, addonId) => acc + addons[addonId - 1].price, 0);
   return (
     <div className={styles.container}>
       <Header
@@ -25,40 +15,30 @@ const Summary = ({
       <div className={styles.wrapper}>
         <div className={styles.planWrapper}>
           <div>
-            <p className={styles.heading}>{`${plans[selection].name} (${
+            <p className={styles.heading}>{`${plans[planId - 1].name} (${
               billing ? "Monthly" : "Yearly"
             })`}</p>
             <button className={styles.btn} onClick={() => setStep(2)}>
               Change
             </button>
           </div>
-          <p className={styles.price}>{`$${plans[selection].price}/${
-            billing ? "month" : "year"
-          }`}</p>
+          <p className={styles.price}>
+            {`$${plans[planId - 1].price}/${billing ? "month" : "year"}`}
+          </p>
         </div>
         <div className={styles.divider}></div>
         <div className={styles.addonsWrapper}>
           <div>
-            {addons.map((addon, index) =>
-              addon.selected ? (
-                <p key={index} className={styles.addonName}>
-                  {addon.name}
-                </p>
-              ) : (
-                ""
-              )
-            )}
+            {addonIds.map((addonId) => (
+              <p className={styles.addonName}>{addons[addonId - 1].name}</p>
+            ))}
           </div>
           <div>
-            {addons.map((addon, index) =>
-              addon.selected ? (
-                <p key={index} className={styles.addonPrice}>{`+$${
-                  addon.price
-                }/${billing ? "month" : "year"}`}</p>
-              ) : (
-                ""
-              )
-            )}
+            {addonIds.map((addonId) => (
+              <p className={styles.addonPrice}>{`+$${
+                addons[addonId - 1].price
+              }/${billing ? "month" : "year"}`}</p>
+            ))}
           </div>
         </div>
       </div>
@@ -66,7 +46,7 @@ const Summary = ({
         <p className={styles.totalName}>{`Total(per ${
           billing ? "month" : "year"
         })`}</p>
-        <p className={styles.totalPrice}>{`$${totalSum()}`}</p>
+        <p className={styles.totalPrice}>{`$${totalSum}`}</p>
         <div className={styles.navigation}>
           <button className={styles.prevBtn} onClick={prevStep}>
             Go Back

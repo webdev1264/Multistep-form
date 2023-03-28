@@ -1,10 +1,39 @@
+import { useState } from "react";
 import Header from "../Header";
 import Button from "../Navigation/Button";
 import styles from "./info.module.css";
 
-const Info = ({ info, setInfo, isValidated, checkValidation }) => {
-  const onChangeHandler = (event) => {
-    const { name, value } = event.target;
+const Info = ({ info, setInfo, nextStep }) => {
+  const [isValidated, setIsValidated] = useState({
+    name: true,
+    email: true,
+    tel: true,
+  });
+
+  const validation = ({ name, email, tel }) => {
+    if (!name) {
+      name = false;
+    }
+    if (!email.includes("@")) {
+      email = false;
+    }
+    if (!tel) {
+      tel = false;
+    }
+    return { name, email, tel };
+  };
+
+  const handleCheckValidation = (e) => {
+    e.preventDefault();
+    const validationResult = validation(info);
+    setIsValidated(validationResult);
+    if (!Object.values(validationResult).includes(false)) {
+      nextStep();
+    }
+  };
+
+  const handleOnChange = (e) => {
+    const { name, value } = e.target;
     setInfo({
       ...info,
       [name]: value,
@@ -18,8 +47,8 @@ const Info = ({ info, setInfo, isValidated, checkValidation }) => {
         descr="Please provide your name, email address and phone number."
       />
       <form
-        onSubmit={(event) => {
-          checkValidation(event);
+        onSubmit={(e) => {
+          handleCheckValidation(e);
         }}
       >
         <label>
@@ -34,7 +63,7 @@ const Info = ({ info, setInfo, isValidated, checkValidation }) => {
             name="name"
             placeholder="e.g. Stephen King"
             className={!isValidated.name ? styles.invalid : ""}
-            onChange={onChangeHandler}
+            onChange={handleOnChange}
             value={info.name}
           />
         </label>
@@ -50,7 +79,7 @@ const Info = ({ info, setInfo, isValidated, checkValidation }) => {
             name="email"
             placeholder="e.g. stephenking@lorem.com"
             className={!isValidated.email ? styles.invalid : ""}
-            onChange={onChangeHandler}
+            onChange={handleOnChange}
             value={info.email}
           />
         </label>
@@ -66,7 +95,7 @@ const Info = ({ info, setInfo, isValidated, checkValidation }) => {
             name="tel"
             placeholder="e.g. +1 234 567 890"
             className={!isValidated.tel ? styles.invalid : ""}
-            onChange={onChangeHandler}
+            onChange={handleOnChange}
             value={info.tel}
           />
         </label>
