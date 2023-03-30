@@ -1,7 +1,10 @@
+import { useDispatch } from "react-redux";
 import Header from "../Header";
+import { prevStep, setStep } from "../../features/stepSlice";
 import styles from "./summary.module.css";
 
-const Summary = ({ prevStep, billing, selection, setStep, plans, addons }) => {
+const Summary = ({ billing, selection, plans, addons }) => {
+  const dispatch = useDispatch();
   const { planId, addonIds } = selection;
   const totalSum =
     plans[planId - 1].price +
@@ -18,7 +21,7 @@ const Summary = ({ prevStep, billing, selection, setStep, plans, addons }) => {
             <p className={styles.heading}>{`${plans[planId - 1].name} (${
               billing ? "Monthly" : "Yearly"
             })`}</p>
-            <button className={styles.btn} onClick={() => setStep(2)}>
+            <button className={styles.btn} onClick={() => dispatch(setStep(2))}>
               Change
             </button>
           </div>
@@ -48,10 +51,16 @@ const Summary = ({ prevStep, billing, selection, setStep, plans, addons }) => {
         })`}</p>
         <p className={styles.totalPrice}>{`$${totalSum}`}</p>
         <div className={styles.navigation}>
-          <button className={styles.prevBtn} onClick={prevStep}>
+          <button
+            className={styles.prevBtn}
+            onClick={() => dispatch(prevStep())}
+          >
             Go Back
           </button>
-          <button className={styles.nextBtn} onClick={() => setStep()}>
+          <button
+            className={styles.nextBtn}
+            onClick={() => dispatch(setStep(5))}
+          >
             Confirm
           </button>
         </div>

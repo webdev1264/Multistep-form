@@ -3,15 +3,7 @@ import Navigation from "../Navigation/Navigation";
 import Addon from "./Addon";
 import styles from "./addons.module.css";
 
-const Addons = ({
-  addons,
-  nextStep,
-  prevStep,
-  billing,
-  addAddon,
-  removeAddon,
-  selection
-}) => {
+const Addons = ({ addons, nextStep, prevStep, billing }) => {
   return (
     <div className={styles.container}>
       <Header
@@ -20,18 +12,10 @@ const Addons = ({
       />
       <form>
         {addons.map((addon) => (
-          <Addon
-            key={addon.id}
-            id={addon.id}
-            addon={addon}
-            billing={billing}
-            addAddon={addAddon}
-            removeAddon={removeAddon}
-            selection={selection}
-          />
+          <Addon key={addon.id} id={addon.id} addon={addon} billing={billing} />
         ))}
       </form>
-      <Navigation nextStep={nextStep} prevStep={prevStep} />
+      <Navigation />
     </div>
   );
 };

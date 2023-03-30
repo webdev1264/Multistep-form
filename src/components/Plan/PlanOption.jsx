@@ -1,9 +1,13 @@
+import { useSelector, useDispatch } from "react-redux";
+import { changePlan } from "../../features/selectionSlice";
 import styles from "./planOption.module.css";
 import arcade from "../../data/images/icon-arcade.svg";
 import advanced from "../../data/images/icon-advanced.svg";
 import pro from "../../data/images/icon-pro.svg";
 
-const PlanOption = ({ id, name, billing, price, selection, changePlan }) => {
+const PlanOption = ({ id, name, billing, price }) => {
+  const selection = useSelector((state) => state.selection);
+  const dispatch = useDispatch();
   return (
     <div
       className={
@@ -12,7 +16,7 @@ const PlanOption = ({ id, name, billing, price, selection, changePlan }) => {
           : styles.option
       }
       onClick={() => {
-        changePlan(id);
+        dispatch(changePlan(id));
       }}
     >
       <div>

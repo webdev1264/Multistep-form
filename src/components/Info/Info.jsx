@@ -1,14 +1,17 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
 import Header from "../Header";
 import Button from "../Navigation/Button";
+import { nextStep } from "../../features/stepSlice";
 import styles from "./info.module.css";
 
-const Info = ({ info, setInfo, nextStep }) => {
+const Info = ({ info, setInfo }) => {
   const [isValidated, setIsValidated] = useState({
     name: true,
     email: true,
     tel: true,
   });
+  const dispatch = useDispatch();
 
   const validation = ({ name, email, tel }) => {
     if (!name) {
@@ -28,7 +31,7 @@ const Info = ({ info, setInfo, nextStep }) => {
     const validationResult = validation(info);
     setIsValidated(validationResult);
     if (!Object.values(validationResult).includes(false)) {
-      nextStep();
+      dispatch(nextStep());
     }
   };
 
