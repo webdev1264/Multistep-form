@@ -103,7 +103,7 @@ const Info = ({ info, setInfo }) => {
           />
         </label>
         <div className={styles.btnWrapper}>
-          <Button />
+          <Button disable={true} />
         </div>
       </form>
     </div>
