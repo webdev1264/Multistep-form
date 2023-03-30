@@ -31,18 +31,14 @@ const Summary = ({ billing, selection, plans, addons }) => {
         </div>
         <div className={styles.divider}></div>
         <div className={styles.addonsWrapper}>
-          <div>
-            {addonIds.map((addonId) => (
+          {addonIds.map((addonId) => (
+            <div className={styles.addon}>
               <p className={styles.addonName}>{addons[addonId - 1].name}</p>
-            ))}
-          </div>
-          <div>
-            {addonIds.map((addonId) => (
               <p className={styles.addonPrice}>{`+$${
                 addons[addonId - 1].price
               }/${billing ? "month" : "year"}`}</p>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
       <div className={styles.totalWrapper}>

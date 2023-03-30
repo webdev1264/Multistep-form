@@ -53,9 +53,14 @@
 
 .addonsWrapper {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   font-size: 14px;
   font-weight: 500;
+}
+
+.addon {
+  display: flex;
+  justify-content: space-between;
 }
 
 .addonName {
