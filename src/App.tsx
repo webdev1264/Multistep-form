@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import React, { useState, useMemo } from "react";
 import { useSelector } from "react-redux";
 import Menu from "./components/Menu/Menu";
 import Info from "./components/Info/Info";
@@ -7,20 +7,29 @@ import Addons from "./components/Addons/Addons";
 import Summary from "./components/Summary/Summary";
 import ThankYou from "./components/ThankYou";
 import { initialPlans, initialAddons } from "./data/bundles";
+import {
+  InitialPlan,
+  InitialAddon,
+  InitialInfo,
+  InitialSelection,
+} from "./types/interfaces";
+import { RootState } from "./features/rootReducer";
 import "./App.css";
 
 function App() {
   // data from form inputs
-  const [info, setInfo] = useState({
+  const [info, setInfo] = useState<InitialInfo>({
     name: "",
     email: "",
     tel: "",
   });
-  const step = useSelector((state) => state.steps.step);
+  const step = useSelector<RootState, number>((state) => state.steps.step);
   //yearly or monthly billing
-  const [billing, setBilling] = useState(true);
+  const [billing, setBilling] = useState<boolean>(true);
   // selection of plan and addons
-  const selection = useSelector((state) => state.selection);
+  const selection = useSelector<RootState, InitialSelection>(
+    (state) => state.selection
+  );
 
   const [plans, addons] = useMemo(() => {
     if (!billing) {
@@ -29,12 +38,20 @@ function App() {
     return [initialPlans, initialAddons];
   }, [billing]);
 
-  function calcPrice(addons, mult) {
+  function calcPrice(addons: InitialPlan[] | InitialAddon[], mult: number) {
     return addons.map((addon) => ({
       ...addon,
       price: addon.price * mult,
     }));
   }
+
+  const handleInfoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setInfo({
+      ...info,
+      [name]: value,
+    });
+  };
 
   const billingChangeHandler = () => {
     setBilling(!billing);
@@ -45,16 +62,15 @@ function App() {
       <div className="container">
         <Menu step={step} />
         {step === 1 ? (
-          <Info info={info} setInfo={setInfo} />
+          <Info info={info} infoChange={handleInfoChange} />
         ) : step === 2 ? (
           <Plan
             billing={billing}
-            setBilling={setBilling}
             plans={plans}
             billingChange={billingChangeHandler}
           />
         ) : step === 3 ? (
-          <Addons addons={addons} billing={billing} />
+          <Addons addons={addons as InitialAddon[]} billing={billing} />
         ) : step === 4 ? (
           <Summary
             billing={billing}

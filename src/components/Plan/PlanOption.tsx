@@ -4,9 +4,20 @@ import styles from "./planOption.module.css";
 import arcade from "../../data/images/icon-arcade.svg";
 import advanced from "../../data/images/icon-advanced.svg";
 import pro from "../../data/images/icon-pro.svg";
+import { RootState } from "../../features/rootReducer";
+import { InitialSelection } from "../../types/interfaces";
 
-const PlanOption = ({ id, name, billing, price }) => {
-  const selection = useSelector((state) => state.selection);
+interface PlanProps {
+  id: number;
+  name: string;
+  billing: boolean;
+  price: number;
+}
+
+const PlanOption: React.FC<PlanProps> = ({ id, name, billing, price }) => {
+  const selection = useSelector<RootState, InitialSelection>(
+    (state) => state.selection
+  );
   const dispatch = useDispatch();
   return (
     <div

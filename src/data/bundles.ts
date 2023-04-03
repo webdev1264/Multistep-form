@@ -1,4 +1,6 @@
-const initialPlans = [
+import { InitialPlan, InitialAddon } from "../types/interfaces";
+
+const initialPlans: InitialPlan[] = [
   {
     id: 1,
     name: "Arcade",
@@ -16,7 +18,7 @@ const initialPlans = [
   },
 ];
 
-const initialAddons = [
+const initialAddons: InitialAddon[] = [
   {
     id: 1,
     name: "Online service",

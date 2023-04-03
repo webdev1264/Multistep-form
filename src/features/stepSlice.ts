@@ -1,12 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { InitialStep } from "../types/interfaces";
 
-const initialState = {
+const initialStep: InitialStep = {
   step: 1,
 };
 
 const stepSlice = createSlice({
   name: "steps",
-  initialState,
+  initialState: initialStep,
   reducers: {
     nextStep(state) {
       state.step++;

@@ -1,9 +1,15 @@
 import Header from "../Header";
 import Navigation from "../Navigation/Navigation";
 import Addon from "./Addon";
+import { InitialAddon } from "../../types/interfaces";
 import styles from "./addons.module.css";
 
-const Addons = ({ addons, nextStep, prevStep, billing }) => {
+interface AddonsProps {
+  addons: InitialAddon[];
+  billing: boolean;
+}
+
+const Addons: React.FC<AddonsProps> = ({ addons, billing }) => {
   return (
     <div className={styles.container}>
       <Header

@@ -1,6 +1,11 @@
 import styles from "./billing.module.css";
 
-const Billing = ({ billingChange, billing }) => {
+interface BillingProps {
+  billingChange: () => void;
+  billing: boolean;
+}
+
+const Billing: React.FC<BillingProps> = ({ billingChange, billing }) => {
   const onClickHandler = () => {
     billingChange();
   };

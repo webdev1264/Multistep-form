@@ -1,9 +1,19 @@
 import { useSelector, useDispatch } from "react-redux";
 import { addAddon, removeAddon } from "../../features/selectionSlice";
+import { InitialAddon, InitialSelection } from "../../types/interfaces";
+import { RootState } from "../../features/rootReducer";
 import styles from "./addons.module.css";
 
-const Addon = ({ id, addon, billing }) => {
-  const selection = useSelector((state) => state.selection);
+interface AddonProps {
+  id: number;
+  addon: InitialAddon;
+  billing: boolean;
+}
+
+const Addon: React.FC<AddonProps> = ({ id, addon, billing }) => {
+  const selection = useSelector<RootState, InitialSelection>(
+    (state) => state.selection
+  );
   const dispatch = useDispatch();
   const isSelected = selection.addonIds.includes(id);
   const handleChange = () => {

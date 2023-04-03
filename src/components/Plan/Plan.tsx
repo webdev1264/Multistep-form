@@ -3,8 +3,15 @@ import Navigation from "../Navigation/Navigation";
 import PlanOption from "./PlanOption";
 import Billing from "./Billing";
 import styles from "./plan.module.css";
+import { InitialPlan } from "../../types/interfaces";
 
-const Plan = ({ billing, setBilling, plans, billingChange }) => {
+interface PlanProps {
+  billing: boolean;
+  plans: InitialPlan[];
+  billingChange: () => {};
+}
+
+const Plan: React.FC<PlanProps> = ({ billing, plans, billingChange }) => {
   return (
     <div className={styles.container}>
       <Header
@@ -16,11 +23,7 @@ const Plan = ({ billing, setBilling, plans, billingChange }) => {
           <PlanOption key={plan.id} {...plan} billing={billing} />
         ))}
       </div>
-      <Billing
-        billingChange={billingChange}
-        billing={billing}
-        setBilling={setBilling}
-      />
+      <Billing billingChange={billingChange} billing={billing} />
       <Navigation />
     </div>
   );

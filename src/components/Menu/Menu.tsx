@@ -1,7 +1,11 @@
 import Step from "./Step";
 import styles from "./menu.module.css";
 
-const Menu = ({ step }) => {
+interface MenuProps {
+  step: number
+}
+
+const Menu: React.FC<MenuProps> = ({ step }) => {
   return (
     <div className={styles.menu}>
       <Step id={1} step={step} text="your info" />
