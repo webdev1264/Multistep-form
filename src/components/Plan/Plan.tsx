@@ -8,7 +8,7 @@ import { InitialPlan } from "../../types/interfaces";
 interface PlanProps {
   billing: boolean;
   plans: InitialPlan[];
-  billingChange: () => {};
+  billingChange: () => void;
 }
 
 const Plan: React.FC<PlanProps> = ({ billing, plans, billingChange }) => {
