@@ -1,8 +1,12 @@
-
+import React from "react";
 import styles from "./header.module.css";
 
-const Header = ({ heading, descr }) => {
+interface HeaderProps {
+  heading: string;
+  descr: string;
+}
 
+const Header: React.FC<HeaderProps> = ({ heading, descr }) => {
   return (
     <>
       <h1 className={styles.heading}>{heading}</h1>

@@ -4,10 +4,10 @@ import Header from "../Header";
 import Button from "../Navigation/Button";
 import { nextStep } from "../../features/stepSlice";
 import styles from "./info.module.css";
-import { InitialInfo } from "../../types/interfaces";
+import { InitialInfoInterface } from "../../types/interfaces";
 
 interface InfoProps {
-  info: InitialInfo;
+  info: InitialInfoInterface;
   infoChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
@@ -15,7 +15,7 @@ interface InitialValidation {
   [key: string]: boolean;
 }
 
-const Info = ({ info, infoChange }: InfoProps) => {
+const Info: React.FC<InfoProps> = ({ info, infoChange }) => {
   const [isValidated, setIsValidated] = useState<InitialValidation>({
     name: true,
     email: true,
@@ -23,7 +23,7 @@ const Info = ({ info, infoChange }: InfoProps) => {
   });
   const dispatch = useDispatch();
 
-  const validation = ({ name, email, tel }: InitialInfo) => {
+  const validation = ({ name, email, tel }: InitialInfoInterface) => {
     let nameValidation: boolean = false;
     let emailValidation: boolean = false;
     let telValidation: boolean = false;

@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { InitialSelection } from "../types/interfaces";
+import { InitialSelectionInterface } from "../types/interfaces";
 
-const initialSelection: InitialSelection = {
+const initialSelection: InitialSelectionInterface = {
   planId: 1,
   addonIds: [1],
 };

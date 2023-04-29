@@ -1,17 +1,17 @@
 import { useSelector, useDispatch } from "react-redux";
 import { addAddon, removeAddon } from "../../features/selectionSlice";
-import { InitialAddon, InitialSelection } from "../../types/interfaces";
-import { RootState } from "../../features/rootReducer";
+import { InitialAddonInterface, InitialSelectionInterface } from "../../types/interfaces";
+import { RootStateType } from "../../features/rootReducer";
 import styles from "./addons.module.css";
 
 interface AddonProps {
   id: number;
-  addon: InitialAddon;
+  addon: InitialAddonInterface;
   billing: boolean;
 }
 
 const Addon: React.FC<AddonProps> = ({ id, addon, billing }) => {
-  const selection = useSelector<RootState, InitialSelection>(
+  const selection = useSelector<RootStateType, InitialSelectionInterface>(
     (state) => state.selection
   );
   const dispatch = useDispatch();

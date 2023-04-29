@@ -1,11 +1,11 @@
 import Header from "../Header";
 import Navigation from "../Navigation/Navigation";
 import Addon from "./Addon";
-import { InitialAddon } from "../../types/interfaces";
+import { InitialAddonInterface } from "../../types/interfaces";
 import styles from "./addons.module.css";
 
 interface AddonsProps {
-  addons: InitialAddon[];
+  addons: InitialAddonInterface[];
   billing: boolean;
 }
 

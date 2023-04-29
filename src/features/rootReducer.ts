@@ -7,6 +7,6 @@ const rootReducer = combineReducers({
   steps: stepReducer,
 });
 
-export type RootState = ReturnType<typeof rootReducer>;
+export type RootStateType = ReturnType<typeof rootReducer>;
 
 export default rootReducer;

@@ -1,6 +1,6 @@
-import { InitialPlan, InitialAddon } from "../types/interfaces";
+import { InitialPlanInterface, InitialAddonInterface } from "../types/interfaces";
 
-const initialPlans: InitialPlan[] = [
+const initialPlans: InitialPlanInterface[] = [
   {
     id: 1,
     name: "Arcade",
@@ -18,7 +18,7 @@ const initialPlans: InitialPlan[] = [
   },
 ];
 
-const initialAddons: InitialAddon[] = [
+const initialAddons: InitialAddonInterface[] = [
   {
     id: 1,
     name: "Online service",

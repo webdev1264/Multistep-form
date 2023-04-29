@@ -8,26 +8,26 @@ import Summary from "./components/Summary/Summary";
 import ThankYou from "./components/ThankYou";
 import { initialPlans, initialAddons } from "./data/bundles";
 import {
-  InitialPlan,
-  InitialAddon,
-  InitialInfo,
-  InitialSelection,
+  InitialPlanInterface,
+  InitialAddonInterface,
+  InitialInfoInterface,
+  InitialSelectionInterface,
 } from "./types/interfaces";
-import { RootState } from "./features/rootReducer";
+import { RootStateType } from "./features/rootReducer";
 import "./App.css";
 
-function App() {
+const App: React.FC = () => {
   // data from form inputs
-  const [info, setInfo] = useState<InitialInfo>({
+  const [info, setInfo] = useState<InitialInfoInterface>({
     name: "",
     email: "",
     tel: "",
   });
-  const step = useSelector<RootState, number>((state) => state.steps.step);
+  const step = useSelector<RootStateType, number>((state) => state.steps.step);
   //yearly or monthly billing
   const [billing, setBilling] = useState<boolean>(true);
   // selection of plan and addons
-  const selection = useSelector<RootState, InitialSelection>(
+  const selection = useSelector<RootStateType, InitialSelectionInterface>(
     (state) => state.selection
   );
 
@@ -38,7 +38,10 @@ function App() {
     return [initialPlans, initialAddons];
   }, [billing]);
 
-  function calcPrice(addons: InitialPlan[] | InitialAddon[], mult: number) {
+  function calcPrice(
+    addons: InitialPlanInterface[] | InitialAddonInterface[],
+    mult: number
+  ) {
     return addons.map((addon) => ({
       ...addon,
       price: addon.price * mult,
@@ -70,7 +73,10 @@ function App() {
             billingChange={billingChangeHandler}
           />
         ) : step === 3 ? (
-          <Addons addons={addons as InitialAddon[]} billing={billing} />
+          <Addons
+            addons={addons as InitialAddonInterface[]}
+            billing={billing}
+          />
         ) : step === 4 ? (
           <Summary
             billing={billing}
@@ -85,6 +91,6 @@ function App() {
       <div className="mobileNavigation"></div>
     </main>
   );
-}
+};
 
 export default App;

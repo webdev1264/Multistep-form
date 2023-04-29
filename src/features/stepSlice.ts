@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { InitialStep } from "../types/interfaces";
+import { InitialStepInterface } from "../types/interfaces";
 
-const initialStep: InitialStep = {
+const initialStep: InitialStepInterface = {
   step: 1,
 };
 

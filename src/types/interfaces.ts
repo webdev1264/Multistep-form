@@ -1,26 +1,26 @@
-export interface InitialPlan {
+export interface InitialPlanInterface {
   id: number;
   name: string;
   price: number;
 }
 
-export interface InitialAddon {
+export interface InitialAddonInterface {
   id: number;
   name: string;
   descr: string;
   price: number;
 }
 
-export interface InitialSelection {
+export interface InitialSelectionInterface {
   planId: number;
   addonIds: number[];
 }
 
-export interface InitialStep {
+export interface InitialStepInterface {
   step: number;
 }
 
-export interface InitialInfo {
+export interface InitialInfoInterface {
   [key: string]: string;
 }
 

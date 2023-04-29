@@ -3,11 +3,11 @@ import Navigation from "../Navigation/Navigation";
 import PlanOption from "./PlanOption";
 import Billing from "./Billing";
 import styles from "./plan.module.css";
-import { InitialPlan } from "../../types/interfaces";
+import { InitialPlanInterface } from "../../types/interfaces";
 
 interface PlanProps {
   billing: boolean;
-  plans: InitialPlan[];
+  plans: InitialPlanInterface[];
   billingChange: () => void;
 }
 

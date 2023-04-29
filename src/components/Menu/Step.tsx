@@ -1,6 +1,13 @@
+import React from "react";
 import styles from "./step.module.css";
 
-const Step = ({ id, text, step=4 }) => {
+interface StepProps {
+  id: number;
+  text: string;
+  step: number;
+}
+
+const Step: React.FC<StepProps> = ({ id, text, step = 4 }) => {
   return (
     <div className={styles.steps}>
       <div className={`${styles.round} ${step === id ? styles.active : ""}`}>

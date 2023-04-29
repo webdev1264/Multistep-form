@@ -1,8 +1,13 @@
 import { useDispatch } from "react-redux";
 import { nextStep } from "../../features/stepSlice";
 import styles from "./button.module.css";
+import React from "react";
 
-const Button = ({ disable = false }) => {
+interface ButtonProps {
+  disable: boolean;
+}
+
+const Button: React.FC<ButtonProps> = ({ disable = false }) => {
   const dispatch = useDispatch();
   return (
     <button

@@ -1,8 +1,9 @@
 import Header from "./Header";
 import styles from "./thankYou.module.css";
 import thankYou from "../data/images/icon-thank-you.svg";
+import React from "react";
 
-const ThankYou = () => {
+const ThankYou: React.FC = () => {
   return (
     <div className={styles.container}>
       <img src={thankYou} alt="Check"></img>

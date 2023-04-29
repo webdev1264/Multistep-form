@@ -4,8 +4,8 @@ import styles from "./planOption.module.css";
 import arcade from "../../data/images/icon-arcade.svg";
 import advanced from "../../data/images/icon-advanced.svg";
 import pro from "../../data/images/icon-pro.svg";
-import { RootState } from "../../features/rootReducer";
-import { InitialSelection } from "../../types/interfaces";
+import { RootStateType } from "../../features/rootReducer";
+import { InitialSelectionInterface } from "../../types/interfaces";
 
 interface PlanProps {
   id: number;
@@ -15,7 +15,7 @@ interface PlanProps {
 }
 
 const PlanOption: React.FC<PlanProps> = ({ id, name, billing, price }) => {
-  const selection = useSelector<RootState, InitialSelection>(
+  const selection = useSelector<RootStateType, InitialSelectionInterface>(
     (state) => state.selection
   );
   const dispatch = useDispatch();
