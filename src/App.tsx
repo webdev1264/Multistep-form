@@ -48,7 +48,7 @@ const App: React.FC = () => {
     });
   };
 
-  const billingChangeHandler = () => {
+  const handleBillingChange = () => {
     setBilling(!billing);
   };
 
@@ -62,7 +62,7 @@ const App: React.FC = () => {
           <Plan
             billing={billing}
             plans={plans}
-            billingChange={billingChangeHandler}
+            billingChange={handleBillingChange}
           />
         ) : step === 3 ? (
           <Addons
