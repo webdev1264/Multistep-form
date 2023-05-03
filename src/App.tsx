@@ -8,12 +8,12 @@ import Summary from "./components/Summary/Summary";
 import ThankYou from "./components/ThankYou";
 import { initialPlans, initialAddons } from "./data/bundles";
 import {
-  InitialPlanInterface,
   InitialAddonInterface,
   InitialInfoInterface,
   InitialSelectionInterface,
 } from "./types/interfaces";
 import { RootStateType } from "./features/rootReducer";
+import calcPrice from "./data/utils";
 import "./App.css";
 
 const App: React.FC = () => {
@@ -23,6 +23,7 @@ const App: React.FC = () => {
     email: "",
     tel: "",
   });
+  //the first type represents an overal Redux state, while the second type represents the type of the selected state
   const step = useSelector<RootStateType, number>((state) => state.steps.step);
   //yearly or monthly billing
   const [billing, setBilling] = useState<boolean>(true);
@@ -31,22 +32,13 @@ const App: React.FC = () => {
     (state) => state.selection
   );
 
+  //instead of using useState with useEffect, what will cause a rerendering. useMemo will only recompute if the dependency value is changed
   const [plans, addons] = useMemo(() => {
     if (!billing) {
       return [calcPrice(initialPlans, 10), calcPrice(initialAddons, 10)];
     }
     return [initialPlans, initialAddons];
   }, [billing]);
-
-  function calcPrice(
-    addons: InitialPlanInterface[] | InitialAddonInterface[],
-    mult: number
-  ) {
-    return addons.map((addon) => ({
-      ...addon,
-      price: addon.price * mult,
-    }));
-  }
 
   const handleInfoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -82,7 +74,7 @@ const App: React.FC = () => {
             billing={billing}
             selection={selection}
             plans={plans}
-            addons={addons}
+            addons={addons as InitialAddonInterface[]}
           />
         ) : (
           <ThankYou />

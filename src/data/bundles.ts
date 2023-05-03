@@ -1,4 +1,7 @@
-import { InitialPlanInterface, InitialAddonInterface } from "../types/interfaces";
+import {
+  InitialPlanInterface,
+  InitialAddonInterface,
+} from "../types/interfaces";
 
 const initialPlans: InitialPlanInterface[] = [
   {

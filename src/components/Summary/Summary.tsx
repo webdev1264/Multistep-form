@@ -2,8 +2,25 @@ import { useDispatch } from "react-redux";
 import Header from "../Header";
 import { prevStep, setStep } from "../../features/stepSlice";
 import styles from "./summary.module.css";
+import {
+  InitialAddonInterface,
+  InitialPlanInterface,
+  InitialSelectionInterface,
+} from "../../types/interfaces";
 
-const Summary = ({ billing, selection, plans, addons }) => {
+interface SummaryProps {
+  billing: boolean;
+  selection: InitialSelectionInterface;
+  plans: InitialPlanInterface[];
+  addons: InitialAddonInterface[];
+}
+
+const Summary: React.FC<SummaryProps> = ({
+  billing,
+  selection,
+  plans,
+  addons,
+}) => {
   const dispatch = useDispatch();
   const { planId, addonIds } = selection;
   const totalSum =
