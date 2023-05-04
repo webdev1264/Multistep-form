@@ -13,7 +13,7 @@ import {
   InitialSelectionInterface,
 } from "./types/interfaces";
 import { RootStateType } from "./features/rootReducer";
-import calcPrice from "./data/utils";
+import calcPrice from "./utils/calcPrice";
 import "./App.css";
 
 const App: React.FC = () => {
